@@ -1,0 +1,26 @@
+const http = require('http');
+
+http.createServer(function (req, res) {
+  
+    // формирование разных ответов сервера для запросов с различными HTTP методами 
+    switch (req.method) {
+        case 'GET': {
+    
+            const response_text = 'GET request to path ' + req.url
+
+            console.log(response_text);
+            res.end(response_text);          
+            
+            break;
+        }
+        case 'POST': {
+
+            const response_text = 'POST request to path ' + req.url
+
+            console.log(response_text);
+            res.end(response_text) 
+            break;
+        }
+    }
+
+}).listen(8080);
