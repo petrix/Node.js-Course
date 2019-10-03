@@ -1,3 +1,4 @@
+const body_parser = require('body-parser');
 const express = require('express');
 const app = express();
 const router = express.Router();
@@ -5,7 +6,9 @@ const port = 8080;
 
 router.route("/")
     .get(function (req, res) {
-        res.send("List of products. Get method.");
+        res.send("List of products. GET method.");
+        res.send(body_parser.json());
+        console.log(`${body_parser.json}`);
     })
     .post(function (req, res) {
         res.send("Product created. POST method.");
