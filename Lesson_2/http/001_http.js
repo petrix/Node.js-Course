@@ -1,7 +1,7 @@
 const http = require('http');
 
 const server = http.createServer();
-const server = http.Server();
+// const server = http.Server();
 
 server.on('request', function(request, response){
     console.log('Connection established!');    

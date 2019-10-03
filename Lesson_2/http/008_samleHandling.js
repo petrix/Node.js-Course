@@ -6,7 +6,7 @@ http.createServer(function (req, res) {
     switch (req.method) {
         case 'GET': {
     
-            const response_text = 'GET request to path ' + req.url
+            const response_text = 'GET request to path ' + req.url;
 
             console.log(response_text);
             res.end(response_text);          
